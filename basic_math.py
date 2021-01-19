@@ -33,7 +33,7 @@ def get_greatest(number_list):
             99
     """
 
-    return greatest_number
+    return greatest_num
 
 
 def get_smallest(number_list):
