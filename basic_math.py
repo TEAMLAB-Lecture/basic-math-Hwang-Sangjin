@@ -71,7 +71,7 @@ def get_mean(number_list):
     mean = None
 
     for looper in range(0,list_num):
-        mean+=number_list[looper]
+        mean+=int(number_list[looper])
 
     mean = mean/ list_num
 
