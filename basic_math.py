@@ -126,7 +126,7 @@ def get_median(number_list):
 
     else:
         center = int(list_num/2)
-        if center%2==0:
+        if center%2==1:
             median = number_list[center]
         else:
             median = (number_list[center-1] + number_list[center])/2
