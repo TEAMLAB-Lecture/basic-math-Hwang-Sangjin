@@ -68,7 +68,7 @@ def get_smallest(number_list):
 def get_mean(number_list):
     list_num = len(number_list)
 
-    mean = None
+    mean = 0
 
     for looper in range(0,list_num):
         mean+=int(number_list[looper])
