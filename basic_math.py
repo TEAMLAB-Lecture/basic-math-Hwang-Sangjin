@@ -8,6 +8,14 @@
 
 
 def get_greatest(number_list):
+
+    greatest_num=-10000000
+
+    list_size = len(number_list)
+
+    for looper in range(0,list_size):
+        if greatest_num == -10000000 or greatest_num < number_list[looper]:
+            greatest_num = number_list[looper]
     """
     주어진 리스트에서 가장 큰 숫자를 반환함
 
@@ -24,11 +32,19 @@ def get_greatest(number_list):
             >>> bm.get_greatest(number_list)
             99
     """
-    greatest_number = None
+
     return greatest_number
 
 
 def get_smallest(number_list):
+
+    smallest_number=10000000
+
+    list_size = len(number_list)
+
+    for looper in range(0,list_size):
+        if smallest_number == 10000000 or smallest_number < number_list[looper]:
+            smallest_number = number_list[looper]
     """
     주어진 리스트에서 제일 작은 숫자를 반환함
 
@@ -45,11 +61,20 @@ def get_smallest(number_list):
             >>> bm.get_smallest(number_list)
             11
     """
-    smallest_number = None
+
     return smallest_number
 
 
 def get_mean(number_list):
+    list_num = len(number_list)
+
+    mean = None
+
+    for looper in range(0,list_num):
+        mean+=number_list[looper]
+
+    mean = mean/ list_num
+
     """
     주어진 리스트 숫자들의 평균을 구함.
 
@@ -66,7 +91,7 @@ def get_mean(number_list):
             >>> bm.get_mean(number_list)
             47
     """
-    mean = None
+    
     return mean
 
 
@@ -91,4 +116,18 @@ def get_median(number_list):
             35.5
     """
     median = None
+
+    number_list.sort()
+
+    list_num = len(number_list)
+
+    if list_num == 0:
+        median =None
+
+    else:
+        center = int(list_num/2)
+        if center%2==1:
+            median = number_list[center]
+        else:
+            median = (number_list[center-1] + number_list[center])/2
     return median
