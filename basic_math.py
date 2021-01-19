@@ -43,7 +43,7 @@ def get_smallest(number_list):
     list_size = len(number_list)
 
     for looper in range(0,list_size):
-        if smallest_number == 10000000 or smallest_number < number_list[looper]:
+        if smallest_number == 10000000 or smallest_number > number_list[looper]:
             smallest_number = number_list[looper]
     """
     주어진 리스트에서 제일 작은 숫자를 반환함
@@ -112,7 +112,7 @@ def get_median(number_list):
             >>> bm.get_median(number_list)
             39
             >>> number_list2 = [39, 54, 32, 11, 99, 5]
-            >>> bm.get_median(number_list2)
+            >>> bm.get_median(number_list2)z
             35.5
     """
     median = None
